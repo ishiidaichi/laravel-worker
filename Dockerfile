@@ -25,8 +25,6 @@ RUN apt-get -y install supervisor
 
 COPY supervisord.conf /etc/supervisord.conf
 
-ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
-
 #
 #--------------------------------------------------------------------------
 # Optional Software's Installation
@@ -44,3 +42,5 @@ ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
 #
 
 WORKDIR /var/www
+
+CMD ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
