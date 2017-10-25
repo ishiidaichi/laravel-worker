@@ -14,6 +14,7 @@ RUN add-apt-repository universe
 RUN apt-get update
 RUN apt-get -y install supervisor
 
+RUN mkdir /var/log/php
 RUN chmod -R 777 /var/log/php
 #
 #--------------------------------------------------------------------------
