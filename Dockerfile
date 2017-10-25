@@ -8,7 +8,7 @@ FROM ishiidaichi/laradock-workspace-mongo:latest
 
 MAINTAINER Daichi Ishii <me@ishiidaichi.com>
 
-RUN apk --update add supervisor
+RUN apt-get install -y supervisor
 
 #
 #--------------------------------------------------------------------------
@@ -39,4 +39,4 @@ ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]
 #--------------------------------------------------------------------------
 #
 
-WORKDIR /etc/supervisor/conf.d/
+WORKDIR /var/www
