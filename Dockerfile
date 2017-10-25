@@ -8,7 +8,11 @@ FROM ishiidaichi/laradock-workspace-mongo:latest
 
 MAINTAINER Daichi Ishii <me@ishiidaichi.com>
 
-RUN apt-get install -y supervisor
+USER root
+
+RUN add-apt-repository universe
+RUN apt-get update
+RUN apt-get -y install supervisor
 
 #
 #--------------------------------------------------------------------------
