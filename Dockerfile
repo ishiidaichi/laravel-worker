@@ -18,6 +18,8 @@ RUN mkdir /var/log/php
 RUN touch /var/log/php/horizon.log
 RUN chmod -R 777 /var/log/php
 
+COPY ./crontab /etc/cron.d
+RUN chmod -R 644 /etc/cron.d
 
 #
 #--------------------------------------------------------------------------
